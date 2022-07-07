@@ -6,17 +6,21 @@ import Homepage from "./pages/Homepage/Homepage";
 import Navigation from "./components/Navigation/Navigation";
 import BeerDetails from "./pages/BeerDetails/BeerDetails";
 
+/* What is this prop you're passing to App? App normally has no props because its the "root" component */
 function App({ hideLink }) {
   const location = useLocation();
   return (
     <div className="App">
       <Navigation hideLink={location?.pathname === "/"}></Navigation>
       <Routes>
-        <Route path="/" element={<Homepage navLink></Homepage>}></Route>
-        <Route path="/beers" element={<Beers></Beers>}></Route>
-        <Route path="/beers/:id" element={<BeerDetails></BeerDetails>}></Route>
-        <Route path="/random" element={<BeerDetails></BeerDetails>}></Route>
-        <Route path="/new" element={<NewBeer></NewBeer>}></Route>
+        {/* Routes should be ordered from the more specific to the more vegues ones, to avoid routing errors.
+        Also, for all components that do not have children, you can use the "easy-close kind"
+        <Component /> instead of <Component></>Component>. It gets much more readable! */}
+        <Route path="/" element={<Homepage navLink />} />
+        <Route path="/beers" element={<Beers />} />
+        <Route path="/beers/:id" element={<BeerDetails />} />
+        <Route path="/random" element={<BeerDetails />} />
+        <Route path="/new" element={<NewBeer />} />
       </Routes>
     </div>
   );
