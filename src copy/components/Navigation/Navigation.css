@@ -1,0 +1,10 @@
+.house {
+  background-color: rgb(8, 166, 214);
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.house img {
+  width: 50px;
+}
