@@ -10,11 +10,12 @@ function App() {
   return (
     <div className="App">
     <Routes>
-      <Route path='/' element={<HomePage />}/>
+      {/* Routes should be ordered from the more specific to the more generic, to avoid routing errors */}
+      <Route path='/beers/:id' element={<BeerPage />} />
       <Route path='/beers' element={<AllBeersPage />}/>
       <Route path='/random-beer' element={<RandomBeerPage />}/>
       <Route path='/new-beer' element={<NewBeerPage />}/>
-      <Route path='/beers/:id' element={<BeerPage />} />
+      <Route path='/' element={<HomePage />}/>
     </Routes>
     </div>
   );
