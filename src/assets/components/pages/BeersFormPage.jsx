@@ -8,6 +8,8 @@ export default function BeersFormPage() {
     name: "",
     tagline: "",
     attenuation_level: "",
+    /* Syntax is very important! Bellow you have a typo, so no new beer will be publish because
+    the API is looking for first_brewed and you're sending frist_brewed */
     frist_brewed: "",
     description: "",
     contributed_by: ""

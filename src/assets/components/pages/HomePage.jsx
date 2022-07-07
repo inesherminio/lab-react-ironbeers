@@ -11,6 +11,7 @@ function HomePage() {
 
   return (
     <div> 
+        {/* The bellow divs should, on click, take the user to those pages. */}
         <div>
         <h2>All beers </h2>
         <img src= "beers.png" alt="home" className="page-img" />
