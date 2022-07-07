@@ -11,7 +11,8 @@ const BeerDetail = ({apiUrl}) => {
     useEffect(()=>{
         const fetchBeerDetail = async () =>{
             try {
-                const oneBeerApi =apiUrl.concat(`/${id}`);
+                const oneBeerApi = `${apiUrl}/${id}`;
+                /* const oneBeerApi =apiUrl.concat(`/${id}`); */
                 const response = await axios.get(oneBeerApi)
                 setBeer(response.data);
             } catch (error) {

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const AllBeers = ({ apiUrl }) => {
   const [beers, setBeers] = useState(null);
   const [searchedString, setSearchString] = useState("");
-  
+
   //API call
   useEffect(() => {
     const fetchBeers = async () => {
@@ -20,13 +20,12 @@ const AllBeers = ({ apiUrl }) => {
     fetchBeers();
   }, []);
 
-
   let searchedProducts = null;
-  if(searchedString!==""){
-    searchedProducts = beers.filter((beer) =>{
-        return beer.name.toLowerCase().includes(searchedString.toLowerCase());
-    })
-  }else{
+  if (searchedString !== "") {
+    searchedProducts = beers.filter((beer) => {
+      return beer.name.toLowerCase().includes(searchedString.toLowerCase());
+    });
+  } else {
     searchedProducts = beers;
   }
 
@@ -54,7 +53,6 @@ const AllBeers = ({ apiUrl }) => {
   };
 
   const handleChange = (e) => {
-    
     setSearchString(e.target.value);
   };
   return (

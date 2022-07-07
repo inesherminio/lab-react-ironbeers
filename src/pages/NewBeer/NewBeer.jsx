@@ -25,7 +25,8 @@ const NewBeer = ({ apiUrl }) => {
     e.preventDefault(); //prevents browser to reloada/refresh page
    
     try {
-        await axios.post(apiUrl.concat('/new'), values);
+        await axios.post(`${apiUrl}/new`, values);
+        /* await axios.post(apiUrl.concat('/new'), values); */
         setValues({
             name: "",
             tagline: "",
