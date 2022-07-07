@@ -24,6 +24,7 @@ export default function Beers() {
 
     const displayBeers = () => {
         return beers.map((beer) => (
+          /* Console.log the information that comes with the API. Each beer has an "_id" field, not "id" */
           <Beer {...beer} key={beer.id}  />
         ))
       }

@@ -9,10 +9,11 @@ function App() {
   return (
     <div className="App">
      <Routes>
-       <Route path='/' element={<HomePage/>}/>
+      {/* Routes should be ordered from the more specific to the more vague one, to avoid routing errors. */}
        <Route path="/beers" element={<Beers/>}/>
        <Route path="/random-beer" element={<RandomBeer/>}/>
        <Route path="/new-beer" element={<NewBeer/>}/>
+       <Route path='/' element={<HomePage/>}/>
        </Routes>
     </div>
   );
