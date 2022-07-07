@@ -1,0 +1,29 @@
+h1 {
+  margin: 0.5em;
+}
+
+.beers {
+  display: flex;
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+}
+
+.beers img {
+  width: 100px;
+  height: auto;
+}
+
+.beers h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.beers-item {
+  padding-left: 3em;
+}
+
+.beersLink {
+  text-decoration: none;
+  color: black;
+}
